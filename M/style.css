@@ -71,7 +71,7 @@ header img {
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #ff0000;
+    color: #ad56ff;
 }
 .carousel .list .item .buttons{
     display: grid;
@@ -93,69 +93,6 @@ header img {
     color: #eee;
 }
 
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    width: max-content;
-    z-index: 100;
-    display: flex;
-    gap: 20px;
-}
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    flex-shrink: 0;
-    position: relative;
-}
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.thumbnail .item .content{
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-}
-.thumbnail .item .content .title{
-    font-weight: 500;
-}
-.thumbnail .item .content .description{
-    font-weight: 300;
-}
-
-.arrows{
-    position: absolute;
-    top: 80%;
-    right: 52%;
-    z-index: 100;
-    width: 300px;
-    max-width: 30%;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-.arrows button{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    font-family: monospace;
-    font-weight: bold;
-    transition: .5s;
-    transition-delay: 0.3s;
-}
-.arrows button:hover{
-    background-color: #ff0000;
-    color: #ffff;
-}
-
 /* animacion */
 .carousel .list .item:nth-child(1){
     z-index: 1;
@@ -172,8 +109,14 @@ header img {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .5s 1s linear 1 forwards;
+    animation: showContent .4s 0.2s linear 1 forwards;
 }
+
+.carousel .list .item:nth-child(1) .content .des
+{
+    font-size: 2vh;
+}
+
 @keyframes showContent{
     to{
         transform: translateY(0px);
@@ -182,16 +125,16 @@ header img {
     }
 }
 .carousel .list .item:nth-child(1) .content .title{
-    animation-delay: 1.2s!important;
+    animation-delay: 0.8s!important;
 }
 .carousel .list .item:nth-child(1) .content .topic{
-    animation-delay: 1.4s!important;
+    animation-delay: 1s!important;
 }
 .carousel .list .item:nth-child(1) .content .des{
-    animation-delay: 1.6s!important;
+    animation-delay: 1.2s!important;
 }
 .carousel .list .item:nth-child(1) .content .buttons{
-    animation-delay: 1.8s!important;
+    animation-delay: 1.4s!important;
 }
 
 .carousel.next .list .item:nth-child(1) img{
